@@ -11,13 +11,15 @@
 		font-weight: 600
 		background-color: red
 		border-radius: 10px
+
 		&::before
 			content: ''
+			display: block !important
 			position: absolute
 			left: 50%
 			top: -8px
 			margin-left: -2px
-			border-bottom: 4px solid $accent
+			border-bottom: 4px solid red
 			border-left: 4px solid transparent
 			border-right: 4px solid transparent
 			border-top: 4px solid transparent

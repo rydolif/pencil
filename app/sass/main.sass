@@ -4,6 +4,7 @@
 .main
 	overflow: hidden
 
+
 .hero
 	background-image: url(../img/hero_bg.jpg)
 	background-size: cover
@@ -73,6 +74,7 @@
 			box-shadow: 6px 6px 4px rgba(0, 0, 0, 0.08)
 			color: #fff
 
+
 .about
 	background-color: #168790
 	position: relative
@@ -102,11 +104,14 @@
 		img
 			position: absolute
 			top: 20%
-			left: -57%
+			left: 50%
+			transform: translate(-50%, 0)
 
 			&:last-child
 				top: 20%
-				left: -90px
+				right: 100%
+				left: auto
+				transform: translate(0, 0)
 
 
 	&__list
@@ -156,33 +161,33 @@
 			p
 				text-indent: 15px
 
+
 .program
 	padding: 90px 0
 	overflow: visible
 
-	h1
+	h2
 		color: #168790
 		text-align: center
 		padding-bottom: 55px
 
 	&__photo
 		position: relative
+		z-index: -1
+
 		img
 			position: absolute
 			top: -250px
-			right: 0
-			width: 15%
+			left: 85%
 
 	&__list
 		display: flex
 		justify-content: space-between
-		align-items: center
 
 	&__item
 		width: 48%
 		display: flex
 		flex-direction: column
-		justify-content: space-between
 		align-items: center
 
 		span
@@ -198,14 +203,14 @@
 			text-indent: 15px
 			color: #4c4c4c
 
+
 .works
 	background-image: url(../img/reviews_bg.jpg)
 	background-size: cover
 	background-position: 0% 0%
 	padding: 100px 0 175px
 
-
-	h1
+	h2
 		color: #2965b0
 		margin-bottom: 120px
 		text-align: center
@@ -214,17 +219,40 @@
 		overflow: visible
 
 		.swiper-slide
-			transition: all 0.9s
+			transition: all .9s
 			cursor: pointer
+			z-index: 1
+
+			a
+				&::before,
+				&::after
+					position: absolute
+					left: 50%
+					top: 50%
+					transform: translate(-50%, -50%) scale(0)
+					transition: all .6s
+
+				&::before
+					content: ''
+					width: 100%
+					height: 100%
+					background-color: rgba(#168790, .75)
+
+				&::after
+					content: url(../img/hover.png)
+					z-index: 1
+
 
 			img
 				width: 100%
 
 			&:hover
-				transform: scale(1.1, 1.1)
+				transform: scale(1.2)
 
-				.works__hover
-					display: block
+				a
+					&::before,
+					&::after
+						transform: translate(-50%, -50%) scale(1)
 
 		.swiper-pagination-bullets
 			bottom: -80px
@@ -237,14 +265,6 @@
 		&-active
 			transform: scale(1.5, 1.5)
 
-
-	&__hover
-		position: absolute
-		top: 0
-		display: none
-		width: 100%
-		height: 100%
-		transition: all 0.6s
 
 .reviews
 	background-color: #168790
@@ -261,20 +281,19 @@
 			font-weight: 700
 			margin-bottom: 50px
 
+
+	&__slider
+		padding-bottom: 80px
+
 	&__slide
 		opacity: .2
 
-		b
-			color: #ffffff
-			font-size: 60px
-			font-family: $asc
-			font-weight: 700
 
 		p
 			color: #ffffff
 			font-size: 24px
 
-		div
+		&_info
 			display: flex
 			justify-content: flex-end
 			align-items: center
@@ -282,6 +301,22 @@
 
 			img
 				margin-left: 15px
+
+		&_wrap
+			position: relative
+			width: 75%
+			margin: 0 auto
+
+			&::before
+				content: '""'
+				position: absolute
+				left: -20px
+				top: -20px
+				color: #ffffff
+				font-size: 60px
+				line-height: .3
+				font-family: $asc
+				font-weight: 700
 
 	.swiper-slide-active
 		opacity: 1
@@ -317,18 +352,21 @@
 		&-active
 			transform: scale(1.5, 1.5)
 
+
 .learn
 	position: relative
 	overflow: visible
 	padding-top: 60px
 
+	h2
+		font-size: 60px
+		margin-bottom: 75px
+		text-align: center
+		color: $accent
+
 	&__what
 		padding-bottom: 800px
 
-		h1
-			font-size: 60px
-			margin-bottom: 75px
-			text-align: center
 
 		p
 			font-size: 24px
@@ -353,8 +391,7 @@
 		z-index: 1
 
 		h2
-			color: #168790
-			padding-bottom: 45px
+			margin-bottom: 45px
 			text-align: center
 			font-size: 60px
 			font-family: $asc
@@ -370,12 +407,13 @@
 			img
 				margin-right: 40px
 
+
 .tabs
 	background-color: #ebebeb
 	overflow: visible
 	padding: 260px 0 80px
 
-	h1
+	h2
 		color: #2965b0
 		text-align: center
 		padding-bottom: 70px
@@ -433,13 +471,14 @@
 				color: #168790
 				margin-right: 20px
 
+
 .kurs
 	background-image: url(../img/kurs.jpg)
 	background-size: cover
 	background-position: 0% 0%
 	padding: 100px 0 175px
 
-	h1
+	h2
 		color: #2965b0
 		margin-bottom: 120px
 		text-align: center
@@ -447,47 +486,66 @@
 	&__slider
 		overflow: visible
 
-		.swiper-slide
+		&_slide
 			transition: all 0.9s
 			cursor: pointer
 			position: relative
 
-			span
+			&::before
 				position: absolute
-				top: 0
-				right: 10px
-				color: #ffffff
-				font-size: 30px
-				font-family: $ars
-				font-weight: 700
-				z-index: 10
+				left: 50%
+				top: 50%
+				transform: translate(-50%, -50%) scale(0)
+				transition: all .6s
 
-			p
-				position: absolute
-				top: 45px
-				left: 10px
-				color: #ffffff
-				font-size: 18px
-				line-height: 1.2
-				display: none
-				width: 95%
-				height: 90%
-				transition: all .9s
+			&::before
+				content: ''
+				width: 100%
+				height: 100%
+				background-color: rgba(#168790, .75)
+
+			&:hover
+				transform: scale(1.2)
+
+				&::before,
+				&::after
+					transform: translate(-50%, -50%) scale(1)
+
+				p
+					opacity: 1
 
 			img
 				width: 100%
 
-			&:hover
-				transform: scale(1.1, 1.1)
+		
+		&_text
+			position: absolute
+			top: 10px
+			left: 20px
+			right: 20px
+			bottom: 10px
+			transition: all .9s
 
-				.kurs__hover
-					display: block
+			h3
+				text-align: right
+				color: #ffffff
+				font-size: 30px
+				font-family: $ars
+				font-weight: 700
+				margin-bottom: 20px
 
-				p
-					display: block
+			p
+				color: #ffffff
+				font-size: 18px
+				line-height: 1.2
+				width: 95%
+				height: 90%
+				transition: all .9s
+				opacity: 0
+				
 
-		.swiper-pagination-bullets
-			bottom: -80px
+	.swiper-pagination-bullets
+		bottom: -80px
 
 	.swiper-pagination-bullet
 		background-color: #0fcda6
@@ -496,16 +554,6 @@
 
 		&-active
 			transform: scale(1.5, 1.5)
-
-
-	&__hover
-		position: absolute
-		top: 0
-		display: none
-		width: 100%
-		height: 100%
-		transition: all 0.6s
-
 
 
 .record
@@ -517,17 +565,17 @@
 	&__container
 		display: flex
 
+	h3
+		color: #27efff
+		font-size: 36px
+		font-weight: 400
+
+	ul
+		color: #ffffff
+		font-size: 24px
+		line-height: 1.3
+
 	&__left
-
-		h3
-			color: #27efff
-			font-size: 36px
-
-		ul
-			color: #ffffff
-			font-size: 24px
-			line-height: 1.3
-
 		&_second
 			margin-top: 50px
 
@@ -540,7 +588,6 @@
 		bottom: -120px
 		right: -20px
 		
-
 		img
 			position: absolute
 			width: 100%
@@ -642,23 +689,26 @@
 				background-color: #168790
 				box-shadow: 6px 6px 4px rgba(0, 0, 0, 0.26)
 
+
 .how
 	padding: 100px 0 50px
 	position: relative
 	overflow: visible
-	
-	div
-		img
-			position: absolute
-			bottom: -2%
-			left: -17%
-			width: 35%
-			height: 670px
-			&:nth-child(2)
-				position: absolute
-				bottom: -11%
-				left: 68%
-				height: auto
+	z-index: 1
+
+	&__left,
+	&__right
+		position: absolute
+		bottom: -2%
+		z-index: -1
+
+	&__left
+		left: 0
+		bottom: -90px
+
+	&__right
+		right: 0
+		bottom: -200px
 
 	h3
 		color: #168790
@@ -681,6 +731,7 @@
 			color: #428d93
 			font-size: 36px
 			margin-right: 10px
+
 
 .resultat
 	padding-top: 150px
@@ -729,6 +780,7 @@
 		line-height: 1.4
 		padding: 25px 50px
 
+
 .complekt
 	padding-top: 50px
 	text-align: center
@@ -752,6 +804,7 @@
 			left: 75px
 			z-index: 1
 
+
 .elements
 	background-color: #168790
 	padding: 125px 0 45px
@@ -762,23 +815,23 @@
 		display: flex
 		justify-content: center
 
-		h1
-			color: #27efff
+	h2
+		color: #27efff
 
-			br
-				display: none
+		br
+			display: none
 
-			span
-				font-size: 36px
-				color: #ffffff
-				font-family: $fonts
-				font-weight: 400
-				margin-right: 25px
-				&:nth-child(2)
-					font-size: 60px
-					font-family: $asc
-					font-weight: 700
-					margin: 0 15px
+		span
+			font-size: 36px
+			color: #ffffff
+			font-family: $fonts
+			font-weight: 400
+			margin-right: 25px
+			&:nth-child(2)
+				font-size: 60px
+				font-family: $asc
+				font-weight: 700
+				margin: 0 15px
 
 	&__list
 		display: flex
@@ -812,6 +865,8 @@
 		h3
 			color: #27efff
 			font-size: 36px
+			font-weight: 400
+
 
 		li
 			color: #ffffff
@@ -820,6 +875,7 @@
 		&_first
 			padding-right: 27px
 			margin-bottom: 30px
+
 
 .seven
 	background-color: #ebebeb
@@ -844,13 +900,14 @@
 			color: #4c4c4c
 			font-size: 24px
 			box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.18)
-			margin: 30px 0
+			margin: 10px 0 30px 0
 			padding: 10px 10px
 
 		img
 			position: absolute
 			bottom: -55px
 			right: 0
+
 
 .author
 	padding: 60px 0
@@ -898,14 +955,14 @@
 				color: #1dd3bd
 				margin-right: 10px
 
+
 .teacher
 	background-image: url(../img/reviews_bg.jpg)
 	background-size: cover
 	background-position: 0% 0%
 	padding: 100px 0 175px
 
-
-	h1
+	h2
 		color: #2965b0
 		margin-bottom: 120px
 		text-align: center
@@ -914,17 +971,40 @@
 		overflow: visible
 
 		.swiper-slide
-			transition: all 0.9s
+			transition: all .9s
 			cursor: pointer
+			z-index: 1
+
+			a
+				&::before,
+				&::after
+					position: absolute
+					left: 50%
+					top: 50%
+					transform: translate(-50%, -50%) scale(0)
+					transition: all .6s
+
+				&::before
+					content: ''
+					width: 100%
+					height: 100%
+					background-color: rgba(#168790, .75)
+
+				&::after
+					content: url(../img/hover.png)
+					z-index: 1
+
 
 			img
 				width: 100%
 
 			&:hover
-				transform: scale(1.1, 1.1)
+				transform: scale(1.2)
 
-				.teacher__hover
-					display: block
+				a
+					&::before,
+					&::after
+						transform: translate(-50%, -50%) scale(1)
 
 		.swiper-pagination-bullets
 			bottom: -80px
@@ -946,6 +1026,7 @@
 		height: 100%
 		transition: all 0.6s
 
+
 .inst
 	background-color: #168790
 	padding: 60px 0 80px
@@ -956,7 +1037,7 @@
 		flex-direction: column
 		position: relative
 
-		h1
+		h2
 			color: #27efff
 			padding-bottom: 75px
 			text-align: center
@@ -977,7 +1058,7 @@
 					content: "-"
 
 	&__header
-		padding: 20px 0 20px 45px
+		padding: 15px 0 15px 45px
 		margin-bottom: 10px
 		position: relative
 
@@ -989,9 +1070,11 @@
 			&::before
 				content: "+"
 				position: absolute
-				top: -17px
+				top: 50%
 				left: 0
-				font-size: 72px
+				transform: translate(0, -50%)
+				font-size: 36px
+				line-height: 1
 				color: #22d5e4
 				transition: all .6s
 
@@ -1001,6 +1084,7 @@
 
 		ul
 			padding-left: 20px
+
 
 .question
 	background-color: #ebebeb
@@ -1013,15 +1097,15 @@
 		justify-content: center
 		align-items: center
 
-		h1
-			color: #168790
-			padding-bottom: 70px
+	h2
+		color: #168790
+		padding-bottom: 70px
 
-			span
-				color: #393939
-				font-size: 36px
-				font-family: $fonts
-				font-weight: 400
+		span
+			color: #393939
+			font-size: 36px
+			font-family: $fonts
+			font-weight: 400
 
 	&__img
 		position: relative
@@ -1039,7 +1123,7 @@
 	&__bot
 		img
 			position: absolute
-			top: 1%
+			top: -7%
 			right: 0
 			z-index: 1
 
@@ -1051,8 +1135,6 @@
 			padding: 10px 20px
 			width: 100%
 
-		input
-			margin-bottom: 20px
 
 		.error
 			&:nth-child(5)
@@ -1083,7 +1165,7 @@
 			box-shadow: 6px 6px 4px rgba(0, 0, 0, 0.26)
 			background-color: #168790
 
-	
+
 .footer
 	background-color: #d8d8d8
 	padding: 60px 0 55px
@@ -1099,6 +1181,7 @@
 	&__click
 		display: flex
 		flex-direction: column
+		text-align: center
 
 		a
 			color: #393939
@@ -1138,6 +1221,7 @@
 			display: none
 
 	&__up
+		transition: all .3s
 
 		a
 			color: #393939
@@ -1149,7 +1233,7 @@
 
 		&:hover,
 		&:focus
-			transform: scale(1.6, 1.6)
+			transform: scale(1.2, 1.2)
 
 		span
 			background-color: #168790

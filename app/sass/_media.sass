@@ -1,8 +1,19 @@
+@media only screen and (max-width : 1700px)
+	.how
+		&__left
+			left: auto
+			right: 84%
+
+		&__right
+			right: auto
+			left: 61%
+
 
 @media only screen and (max-width : 1200px)
 
 	.hero
 		background-image: url(../img/bg.jpg)
+		padding: 40px 0 60px
 		
 		&__container
 			display: flex
@@ -12,12 +23,9 @@
 		padding-bottom: 50px
 
 		&__oli
-
 			img
-				left: -85%
 				&:last-child
-					top: 24%
-					left: -7%
+					display: none
 
 		&__item
 
@@ -48,7 +56,7 @@
 	.works
 		padding: 60px 0 130px
 
-		h1
+		h2
 			margin-bottom: 50px
 
 		.swiper-pagination-bullets
@@ -67,7 +75,7 @@
 
 		&__what
 
-			h1
+			h2
 				margin-bottom: 45px
 
 		&__tems
@@ -93,7 +101,7 @@
 	.kurs
 		padding: 60px 0 130px
 
-		h1
+		h2
 			margin-bottom: 50px
 
 		.swiper-pagination-bullets
@@ -153,7 +161,7 @@
 	.resultat
 		padding-top: 60px
 
-		h1
+		h2
 			padding-bottom: 60px
 
 		&__header
@@ -177,7 +185,7 @@
 
 		&__title
 
-			h1
+			h2
 				font-size: 54px
 
 				span
@@ -204,6 +212,9 @@
 		img
 			right: -55px
 
+		div p
+			font-size: 20px
+
 	.author
 		padding: 35px 0
 
@@ -222,7 +233,7 @@
 	.inst
 		padding: 35px 0 80px
 
-		h1
+		h2
 			padding-bottom: 50px
 
 		&__top
@@ -231,13 +242,24 @@
 				top: -100px
 				left: 0
 
-@media only screen and (max-width : 991px)
+	.teacher
+		h2
+			margin-bottom: 50px
+
+	.question__form input
+		margin-bottom: 0
+
+	.seven div img
+		display: none
+
+
+@media only screen and (max-width : 992px)
 
 	.about
 		padding: 70px 0 40px
 
 		&__title
-			padding-bottom: 200px
+			padding-bottom: 20px
 
 			p
 				font-size: 27px
@@ -246,14 +268,9 @@
 					font-size: 45px
 
 		&__oli
-
 			img
-				top: 13%
-				left: -146%
-
-				&:last-child
-					top: 15%
-					left: -13%
+				width: 100%
+				position: relative
 
 		&__list
 			flex-wrap: wrap
@@ -306,7 +323,7 @@
 
 		&__what
 
-			h1
+			h2
 				margin-bottom: 20px
 
 		&__tems
@@ -328,7 +345,7 @@
 	.tabs
 		padding-top: 130px
 
-		h1
+		h2
 			padding-bottom: 35px
 
 		&__cover
@@ -387,7 +404,7 @@
 	.resultat
 		padding-top: 15px
 
-		h1
+		h2
 			padding-bottom: 40px
 
 		&__list
@@ -406,7 +423,7 @@
 	.complekt
 		padding: 15px 0 290px
 
-		h1
+		h2
 			font-size: 50px
 
 		p
@@ -425,7 +442,7 @@
 			flex-direction: column
 			text-align: center
 
-			h1
+			h2
 				font-size: 50px
 				line-height: 1
 
@@ -460,7 +477,7 @@
 	.seven
 		padding: 20px 0
 
-		h1
+		h2
 			margin-bottom: 20px
 
 		img
@@ -496,7 +513,7 @@
 
 	.inst
 
-		h1
+		h2
 			font-size: 45px
 
 		&__top
@@ -515,7 +532,7 @@
 
 		&__container
 
-			h1
+			h2
 				padding-bottom: 30px
 
 		&__img
@@ -530,8 +547,13 @@
 	.footer
 		padding: 25px 0 20px
 
+
 @media only screen and (max-width : 767px)
-	
+	.how
+		&__left,
+		&__right
+			display: none
+
 	.hero
 
 		&__left
@@ -583,7 +605,7 @@
 	.works
 		padding: 50px 0 130px
 
-		h1
+		h2
 			margin-bottom: 20px
 
 	.learn
@@ -591,7 +613,7 @@
 		&__what
 			padding-bottom: 0
 
-			h1
+			h2
 				font-size: 50px
 
 			p
@@ -633,7 +655,7 @@
 	.kurs
 		padding: 50px 0 130px
 
-		h1
+		h2
 			margin-bottom: 20px
 
 		&__slider
@@ -672,7 +694,7 @@
 
 	.resultat
 
-		h1
+		h2
 			font-size: 55px
 			padding-bottom: 25px
 
@@ -691,7 +713,7 @@
 	.complekt
 		padding: 15px 0 210px
 
-		h1
+		h2
 			font-size: 45px
 
 		p
@@ -707,7 +729,7 @@
 	.inst
 		padding: 20px 0 50px
 
-		h1
+		h2
 			font-size: 36px
 
 		&__header
@@ -718,7 +740,7 @@
 
 	.question
 
-		h1
+		h2
 			font-size: 50px
 
 		&__bot
@@ -747,6 +769,7 @@
 			img
 				margin-right: 0
 
+
 @media only screen and (max-width : 576px)
 
 	.about
@@ -766,7 +789,7 @@
 	
 	.program
 
-		h1
+		h2
 			padding-bottom: 25px
 			font-size: 45px
 
@@ -810,14 +833,14 @@
 	.complekt
 		padding: 15px 0 220px
 
-		h1
+		h2
 			font-size: 40px
 
 	.elements
 
 		&__title
 
-			h1
+			h2
 				font-size: 40px
 
 				span
@@ -834,17 +857,20 @@
 
 	.question
 
-		h1
+		h2
 			font-size: 40px
 
 			span
 				font-size: 30px
 
+
 @media only screen and (max-width : 480px)
+	h2
+		font-size: 32px !important
+		margin-bottom: 25px !important
+		padding-bottom: 0 !important
 
 	.hero
-		padding: 65px 0
-
 		&__left
 			h1
 				font-size: 36px
@@ -862,6 +888,9 @@
 
 	.about
 		padding-bottom: 20px
+
+		&__text
+			font-size: 16px
 
 		&__title
 			padding-bottom: 30px
@@ -889,9 +918,18 @@
 			font-size: 20px
 
 	.program
+		&__photo
+			display: none
 
-		h1
+		h2
 			font-size: 34px
+
+		&__item
+			p
+				font-size: 16px
+
+			span
+				font-size: 28px
 
 	.reviews
 
@@ -904,7 +942,7 @@
 		&__slide
 
 			p
-				font-size: 18px
+				font-size: 16px
 				line-height: 1
 
 			div
@@ -917,12 +955,26 @@
 
 		&__what
 
-			h1
+			h2
 				font-size: 40px
+
+			p
+				font-size: 18px
+
+		&__list
+			h2
+				padding-bottom: 0
+
+
+			li
+				font-size: 16px
+				margin-bottom: 10px
+				img
+					margin-right: 10px
 
 	.tabs
 
-		h1
+		h2
 			font-size: 50px
 
 		&__cover
@@ -932,10 +984,11 @@
 				font-size: 36px
 
 		&__wrap
+			padding-left: 0
 
 			ul
 				li
-					font-size: 21px
+					font-size: 18px
 					line-height: 1
 
 					span
@@ -944,11 +997,11 @@
 
 	.works
 
-		h1
+		h2
 			font-size: 50px
 
 	.kurs
-		h1
+		h2
 			font-size: 50px
 
 	.record
@@ -993,6 +1046,9 @@
 			font-size: 40px
 			padding-bottom: 10px
 
+		p
+			font-size: 16px
+
 		div
 			img
 				&:nth-child(1)
@@ -1003,7 +1059,7 @@
 	.resultat
 		padding-top: 45px
 
-		h1
+		h2
 			font-size: 50px
 
 		&__header
@@ -1016,7 +1072,7 @@
 	.complekt
 		padding: 15px 0 180px
 
-		h1
+		h2
 			line-height: 1
 
 		&__img
@@ -1025,12 +1081,12 @@
 
 	.inst
 
-		h1
+		h2
 			padding-bottom: 20px
 
 	.question
 
-		h1
+		h2
 			font-size: 30px
 
 		&__img
@@ -1041,3 +1097,7 @@
 
 		&__logo
 			display: none
+
+
+	.swiper-button-next, .swiper-button-prev
+		background-size: 20px 29px

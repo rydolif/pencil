@@ -75,6 +75,8 @@ $(function() {
     $(selectTab).fadeIn();
   });
 
+
+//-------------------------slider---------------------------------------
   var swiper = new Swiper('.works__slider', {
     freeMode: true,
     loop: true,
@@ -86,11 +88,11 @@ $(function() {
       clickable: true,
     },
     breakpoints: {
-      1024: {
-        slidesPerView: 4,
+      1200: {
+        slidesPerView: 3,
         spaceBetween: 40,
       },
-      768: {
+      992: {
         slidesPerView: 3,
         spaceBetween: 30,
       },
@@ -98,7 +100,7 @@ $(function() {
         slidesPerView: 2,
         spaceBetween: 20,
       },
-      320: {
+      480: {
         slidesPerView: 1,
         spaceBetween: 10,
       }
@@ -129,10 +131,6 @@ $(function() {
       clickable: true,
     },
     breakpoints: {
-      1024: {
-        slidesPerView: 4,
-        spaceBetween: 40,
-      },
       768: {
         slidesPerView: 3,
         spaceBetween: 30,
@@ -141,7 +139,7 @@ $(function() {
         slidesPerView: 2,
         spaceBetween: 20,
       },
-      320: {
+      480: {
         slidesPerView: 1,
         spaceBetween: 10,
       }
@@ -158,10 +156,6 @@ $(function() {
       clickable: true,
     },
     breakpoints: {
-      1024: {
-        slidesPerView: 4,
-        spaceBetween: 40,
-      },
       768: {
         slidesPerView: 3,
         spaceBetween: 30,
@@ -170,7 +164,7 @@ $(function() {
         slidesPerView: 2,
         spaceBetween: 20,
       },
-      320: {
+      480: {
         slidesPerView: 1,
         spaceBetween: 10,
       }
