@@ -1,0 +1,1189 @@
+@import "libs"
+@import "base"
+
+.main
+	overflow: hidden
+
+.hero
+	background-image: url(../img/hero_bg.jpg)
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: 0 100%
+	z-index: 1
+	position: relative
+	padding: 100px 0
+
+	&__container
+		display: flex
+
+	&__logo
+		a
+			display: flex
+			align-items: center
+			margin-bottom: 30px
+
+			img
+				margin-right: 15px
+
+		&_text
+			line-height: 1
+
+			p
+				font-size: 30px
+				font-family: $asc
+				font-weight: 700
+				color: #168790
+				letter-spacing: 4px
+
+			span
+				font-size: 16px
+				color: #393939
+				font-family: $ars
+
+	&__left
+		display: flex
+		flex-direction: column
+		align-items: center
+
+		h1
+			font-size: 80px
+			color: #2965b0
+			text-align: center
+			font-weight: 700
+			line-height: 1.2
+			margin-bottom: 35px
+
+		ul
+			margin-bottom: 70px
+
+			li
+				font-size: 24px
+				line-height: 1.5
+
+				span
+					font-size: 36px
+					color: #168790
+					padding-right: 15px
+
+	&__btn
+		padding: 0 57px
+		&:hover,
+		&:focus
+			background-color: #1dd3bd
+			box-shadow: 6px 6px 4px rgba(0, 0, 0, 0.08)
+			color: #fff
+
+.about
+	background-color: #168790
+	position: relative
+	overflow: visible
+	padding: 70px 0 215px
+
+	&__container
+		position: relative
+
+	&__title
+		text-align: center
+		padding-bottom: 215px
+
+		p
+			font-size: 35px
+			color: #89feff
+			line-height: 1.2
+
+			span
+				font-size: 60px
+				font-family: $asc
+				font-weight: 700
+				color: #6aeeca
+
+	&__oli
+
+		img
+			position: absolute
+			top: 20%
+			left: -57%
+
+			&:last-child
+				top: 20%
+				left: -90px
+
+
+	&__list
+		display: flex
+		justify-content: space-between
+		margin-bottom: 125px
+
+	&__item
+		width: 24%
+		text-align: center
+		color: #89feff
+
+		span
+			font-size: 55px
+			font-family: $asc
+			font-weight: 700
+			padding-bottom: 40px
+
+		p
+			font-size: 24px
+			line-height: 1.2
+
+	&__adp
+		display: none
+
+	&__photo
+
+		img
+			width: 54%
+			position: absolute
+			top: -5px
+			left: -7%
+
+	&__text
+		color: #ffffff
+		font-size: 24px
+		line-height: 1.2
+		display: flex
+		flex-direction: column
+		justify-content: flex-end
+		align-items: flex-end
+		position: relative
+
+		div
+			width: 54%
+
+			p
+				text-indent: 15px
+
+.program
+	padding: 90px 0
+	overflow: visible
+
+	h1
+		color: #168790
+		text-align: center
+		padding-bottom: 55px
+
+	&__photo
+		position: relative
+		img
+			position: absolute
+			top: -250px
+			right: 0
+			width: 15%
+
+	&__list
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+	&__item
+		width: 48%
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		align-items: center
+
+		span
+			font-size: 46px
+			color: #4c4c4c
+			font-family: $asc
+			font-weight: 700
+			text-align: center
+			padding: 18px 0 50px
+
+		p
+			font-size: 24px
+			text-indent: 15px
+			color: #4c4c4c
+
+.works
+	background-image: url(../img/reviews_bg.jpg)
+	background-size: cover
+	background-position: 0% 0%
+	padding: 100px 0 175px
+
+
+	h1
+		color: #2965b0
+		margin-bottom: 120px
+		text-align: center
+
+	&__slider
+		overflow: visible
+
+		.swiper-slide
+			transition: all 0.9s
+			cursor: pointer
+
+			img
+				width: 100%
+
+			&:hover
+				transform: scale(1.1, 1.1)
+
+				.works__hover
+					display: block
+
+		.swiper-pagination-bullets
+			bottom: -80px
+
+	.swiper-pagination-bullet
+		background-color: #0fcda6
+		border: 1px solid #0fcda6
+		opacity: 1
+
+		&-active
+			transform: scale(1.5, 1.5)
+
+
+	&__hover
+		position: absolute
+		top: 0
+		display: none
+		width: 100%
+		height: 100%
+		transition: all 0.6s
+
+.reviews
+	background-color: #168790
+	padding-bottom: 90px
+	position: relative
+
+	&__title
+
+		h2
+			text-align: center
+			color: #27efff
+			font-size: 60px
+			font-family: $asc
+			font-weight: 700
+			margin-bottom: 50px
+
+	&__slide
+		opacity: .2
+
+		b
+			color: #ffffff
+			font-size: 60px
+			font-family: $asc
+			font-weight: 700
+
+		p
+			color: #ffffff
+			font-size: 24px
+
+		div
+			display: flex
+			justify-content: flex-end
+			align-items: center
+			margin-top: 60px
+
+			img
+				margin-left: 15px
+
+	.swiper-slide-active
+		opacity: 1
+		transition: all .5s
+
+	&__slider
+		overflow: visible
+
+	&__slide
+
+		p
+			padding: 0 50px
+
+		div
+			p
+				padding: 0
+
+	.swiper-button-next
+		background-image: url(../img/reviews_right.png)
+		top: 44%
+		right: 15px
+
+	.swiper-button-prev
+		background-image: url(../img/reviews_left.png)
+		top: 45%
+		left: 0px
+
+	.swiper-pagination-bullet
+		background-color: #0fcda6
+		border: 1px solid #0fcda6
+		opacity: 1
+
+		&-active
+			transform: scale(1.5, 1.5)
+
+.learn
+	position: relative
+	overflow: visible
+	padding-top: 60px
+
+	&__what
+		padding-bottom: 800px
+
+		h1
+			font-size: 60px
+			margin-bottom: 75px
+			text-align: center
+
+		p
+			font-size: 24px
+			color: #4c4c4c
+			line-height: 1.3
+			text-indent: 15px
+
+	&__tems
+		position: relative
+		display: flex
+		justify-content: center
+		padding-top: 230px
+
+		&_bg
+			position: absolute
+			bottom: -115%
+			left: -17%
+
+	&__list
+		position: absolute
+		bottom: -84%
+		z-index: 1
+
+		h2
+			color: #168790
+			padding-bottom: 45px
+			text-align: center
+			font-size: 60px
+			font-family: $asc
+			font-weight: 700
+
+		li
+			color: #4c4c4c
+			font-size: 24px
+			display: flex
+			align-items: center
+			margin-bottom: 20px
+
+			img
+				margin-right: 40px
+
+.tabs
+	background-color: #ebebeb
+	overflow: visible
+	padding: 260px 0 80px
+
+	h1
+		color: #2965b0
+		text-align: center
+		padding-bottom: 70px
+
+	&__cover
+		display: flex
+		align-items: center
+		margin-bottom: 95px
+
+		li
+			&:first-child
+				margin-right: 25px
+
+		a
+			color: #168790
+			font-size: 60px
+			font-family: $asc
+			font-weight: 700
+			padding: 5px 77px
+			border: 1px solid #168790
+			position: relative
+
+			span
+				font-size: 36px
+				font-family: $fonts
+				font-weight: 400
+				color: #168790
+				padding-right: 25px
+
+		.active
+			background-color: #168790
+			box-shadow: 6px 6px 4px rgba(0, 0, 0, 0.08)
+			color: #27efff
+			&::before
+				content: ''
+				border: 20px solid transparent
+				border-top-color: #168790
+				position: absolute
+				bottom: -41px
+				right: 42%
+
+			span
+				color: #ffffff
+
+	&__wrap
+		padding-left: 75px
+
+		li
+			font-size: 24px
+			color: #4c4c4c
+			line-height: 2
+
+			span
+				font-size: 36px
+				color: #168790
+				margin-right: 20px
+
+.kurs
+	background-image: url(../img/kurs.jpg)
+	background-size: cover
+	background-position: 0% 0%
+	padding: 100px 0 175px
+
+	h1
+		color: #2965b0
+		margin-bottom: 120px
+		text-align: center
+
+	&__slider
+		overflow: visible
+
+		.swiper-slide
+			transition: all 0.9s
+			cursor: pointer
+			position: relative
+
+			span
+				position: absolute
+				top: 0
+				right: 10px
+				color: #ffffff
+				font-size: 30px
+				font-family: $ars
+				font-weight: 700
+				z-index: 10
+
+			p
+				position: absolute
+				top: 45px
+				left: 10px
+				color: #ffffff
+				font-size: 18px
+				line-height: 1.2
+				display: none
+				width: 95%
+				height: 90%
+				transition: all .9s
+
+			img
+				width: 100%
+
+			&:hover
+				transform: scale(1.1, 1.1)
+
+				.kurs__hover
+					display: block
+
+				p
+					display: block
+
+		.swiper-pagination-bullets
+			bottom: -80px
+
+	.swiper-pagination-bullet
+		background-color: #0fcda6
+		border: 1px solid #0fcda6
+		opacity: 1
+
+		&-active
+			transform: scale(1.5, 1.5)
+
+
+	&__hover
+		position: absolute
+		top: 0
+		display: none
+		width: 100%
+		height: 100%
+		transition: all 0.6s
+
+
+
+.record
+	background-color: #168790
+	position: relative
+	overflow: visible
+	padding: 80px 0 80px
+
+	&__container
+		display: flex
+
+	&__left
+
+		h3
+			color: #27efff
+			font-size: 36px
+
+		ul
+			color: #ffffff
+			font-size: 24px
+			line-height: 1.3
+
+		&_second
+			margin-top: 50px
+
+	&__block
+		position: relative
+		width: 60%
+
+	&__right
+		position: absolute
+		bottom: -120px
+		right: -20px
+		
+
+		img
+			position: absolute
+			width: 100%
+			height: 105%
+			z-index: 1
+
+	&__form
+		z-index: 10
+		padding: 75px 50px 60px
+		position: relative
+		width: 100%
+
+		h3
+			color: #1dd3bd
+			font-size: 50px
+			font-family: $asc
+			font-weight: 700
+			padding-bottom: 40px
+			text-align: center
+
+		input, textarea
+			border: 1px solid #ffffff
+			background-color: #ffffff
+			padding: 10px 20px
+			width: 100%
+
+		&_in
+			margin-top: 80px
+
+		.checkbox
+			display: flex
+			margin-bottom: 0
+
+			p
+				font-size: 50px
+				color: #da1502
+
+			span
+				font-size: 24px
+				color: #393939
+
+			s
+				font-size: 30px
+				color: #168790
+				margin: 0 10px
+
+			br
+				display: none
+
+		label
+			position: relative
+			padding-left: 20px
+			cursor: pointer
+			margin-bottom: 0
+			margin-right: 0
+
+			&::before,
+			&::after
+				content: ''
+				position: absolute
+				left: -5px
+				bottom: 22px
+
+			&::before
+				width: 15px
+				height: 15px
+				border-radius: 20px
+				border: 1px solid $accent
+
+			&::after
+				width: 9px
+				height: 9px
+				border-radius: 20px
+				border: 1px solid $accent
+				background-color: #0fcda6
+				left: -2px
+				top: 41px
+				transition: all .6s
+
+		input[type="radio"]
+			display: none
+
+		input[type="radio"]:checked + label::after
+			transform: scale(1)
+
+		input[type="radio"] + label::after
+			transform: scale(0)
+
+	&__btn
+		text-align: center
+		margin-top: 55px
+
+		.btn
+			background-color: #1dd3bd
+			box-shadow: 6px 6px 4px rgba(0, 0, 0, 0.08)
+
+			&:hover,
+			&:focus
+				background-color: #168790
+				box-shadow: 6px 6px 4px rgba(0, 0, 0, 0.26)
+
+.how
+	padding: 100px 0 50px
+	position: relative
+	overflow: visible
+	
+	div
+		img
+			position: absolute
+			bottom: -2%
+			left: -17%
+			width: 35%
+			height: 670px
+			&:nth-child(2)
+				position: absolute
+				bottom: -11%
+				left: 68%
+				height: auto
+
+	h3
+		color: #168790
+		font-size: 60px
+		font-family: $asc
+		font-weight: 700
+		text-align: center
+		padding-bottom: 60px
+
+	ul
+		width: 84%
+		padding-left: 200px
+
+	p
+		font-size: 24px
+		color: #4c4c4c
+		line-height: 1.4
+
+		span
+			color: #428d93
+			font-size: 36px
+			margin-right: 10px
+
+.resultat
+	padding-top: 150px
+	background-color: #ebebeb
+	text-align: center
+
+	h1
+		text-align: center
+		color: #168790
+		padding-bottom: 90px
+
+	&__list
+		padding-bottom: 50px
+
+		.active
+			.resultat__header
+				color: #168790
+				transition: all .4s
+			.resultat__header_change
+				&::before
+					content: "-"
+					transition: all .5s
+
+	&__header
+		color: #1dd3bd
+		font-size: 42px
+		font-family: $asc
+		font-weight: 700
+		position: relative
+		padding-bottom: 15px
+
+		&_change
+			&::before
+				content: "+"
+				position: absolute
+				top: -25px
+				right: 34%
+				font-size: 72px
+				transition: all .6s
+
+	&__dropdown
+		box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.18)
+		background-color: #ebebeb
+		color: #4c4c4c
+		font-size: 24px
+		line-height: 1.4
+		padding: 25px 50px
+
+.complekt
+	padding-top: 50px
+	text-align: center
+	padding-bottom: 700px
+	overflow: visible
+
+	h1
+		color: #168790
+	p
+		color: #4c4c4c
+		font-size: 36px
+		text-transform: uppercase
+		line-height: 1
+
+	&__img
+		position: relative
+
+		img
+			position: absolute
+			top: 0
+			left: 75px
+			z-index: 1
+
+.elements
+	background-color: #168790
+	padding: 125px 0 45px
+	position: relative
+	overflow: visible
+
+	&__title
+		display: flex
+		justify-content: center
+
+		h1
+			color: #27efff
+
+			br
+				display: none
+
+			span
+				font-size: 36px
+				color: #ffffff
+				font-family: $fonts
+				font-weight: 400
+				margin-right: 25px
+				&:nth-child(2)
+					font-size: 60px
+					font-family: $asc
+					font-weight: 700
+					margin: 0 15px
+
+	&__list
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		margin-top: 40px
+		padding-bottom: 40px
+
+		ul
+			color: #ffffff
+			font-size: 24px
+			line-height: 1.4
+
+			span
+				font-size: 36px
+				color: #27efff
+				padding-right: 20px
+
+	&__left
+		position: absolute
+		bottom: -810px
+		right: 35px
+
+	&__right
+		display: flex
+		flex-direction: column
+		justify-content: flex-end
+		align-items: flex-end
+
+		h3
+			color: #27efff
+			font-size: 36px
+
+		li
+			color: #ffffff
+			font-size: 24px
+
+		&_first
+			padding-right: 27px
+			margin-bottom: 30px
+
+.seven
+	background-color: #ebebeb
+	padding: 150px 0 50px
+	overflow: visible
+	position: relative
+
+	h1
+		text-align: center
+		margin-bottom: 50px
+
+	div
+		text-align: center
+
+		span
+			color: #1dd3bd
+			font-size: 42px
+			font-family: $asc
+			font-weight: 700
+
+		p
+			color: #4c4c4c
+			font-size: 24px
+			box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.18)
+			margin: 30px 0
+			padding: 10px 10px
+
+		img
+			position: absolute
+			bottom: -55px
+			right: 0
+
+.author
+	padding: 60px 0
+	overflow: visible
+
+	&__container
+		display: flex
+		justify-content: flex-end
+		align-items: flex-end
+
+	&__cover
+		position: relative
+		img
+			position: absolute
+			bottom: 0
+			right: 25px
+
+	&__text
+		width: 50%
+
+		h2
+			color: #1dd3bd
+			font-size: 36px
+			text-align: center
+
+		h1
+			text-align: center
+
+			span
+				font-size: 36px
+				font-family: $fonts
+				font-weight: 400
+				color: #168790
+
+		p,b
+			color: #4c4c4c
+			font-size: 24px
+
+			p
+
+			&:nth-child(12)
+				margin-bottom: 35px
+
+			span
+				color: #1dd3bd
+				margin-right: 10px
+
+.teacher
+	background-image: url(../img/reviews_bg.jpg)
+	background-size: cover
+	background-position: 0% 0%
+	padding: 100px 0 175px
+
+
+	h1
+		color: #2965b0
+		margin-bottom: 120px
+		text-align: center
+
+	&__slider
+		overflow: visible
+
+		.swiper-slide
+			transition: all 0.9s
+			cursor: pointer
+
+			img
+				width: 100%
+
+			&:hover
+				transform: scale(1.1, 1.1)
+
+				.teacher__hover
+					display: block
+
+		.swiper-pagination-bullets
+			bottom: -80px
+
+	.swiper-pagination-bullet
+		background-color: #0fcda6
+		border: 1px solid #0fcda6
+		opacity: 1
+
+		&-active
+			transform: scale(1.5, 1.5)
+
+
+	&__hover
+		position: absolute
+		top: 0
+		display: none
+		width: 100%
+		height: 100%
+		transition: all 0.6s
+
+.inst
+	background-color: #168790
+	padding: 60px 0 80px
+	overflow: visible
+
+	&__container
+		display: flex
+		flex-direction: column
+		position: relative
+
+		h1
+			color: #27efff
+			padding-bottom: 75px
+			text-align: center
+
+	&__top
+		img
+			position: absolute
+			top: -50px
+			left: -5%
+
+	&__list
+
+		.active
+			.inst__header
+				transition: all .4s
+			.inst__header_change
+				&::before
+					content: "-"
+
+	&__header
+		padding: 20px 0 20px 45px
+		margin-bottom: 10px
+		position: relative
+
+		p
+			font-size: 24px
+			color: #ffffff
+
+		&_change
+			&::before
+				content: "+"
+				position: absolute
+				top: -17px
+				left: 0
+				font-size: 72px
+				color: #22d5e4
+				transition: all .6s
+
+	&__dropdown
+		font-size: 18px
+		color: #fff
+
+		ul
+			padding-left: 20px
+
+.question
+	background-color: #ebebeb
+	padding: 80px 0 60px
+	position: relative
+	overflow: visible
+
+	&__container
+		display: flex
+		justify-content: center
+		align-items: center
+
+		h1
+			color: #168790
+			padding-bottom: 70px
+
+			span
+				color: #393939
+				font-size: 36px
+				font-family: $fonts
+				font-weight: 400
+
+	&__img
+		position: relative
+
+		img
+			position: absolute
+			bottom: -365px
+			left: -185px
+
+			&:nth-child(2)
+				bottom: 2%
+				left: 65%
+				width: 5%
+
+	&__bot
+		img
+			position: absolute
+			top: 1%
+			right: 0
+			z-index: 1
+
+	&__form
+
+		input, textarea
+			border: 1px solid #ffffff
+			background-color: #ffffff
+			padding: 10px 20px
+			width: 100%
+
+		input
+			margin-bottom: 20px
+
+		.error
+			&:nth-child(5)
+				bottom: -40px
+
+		&__textarea
+			display: block
+			border: 1px solid #ffffff
+			height: 210px !important
+			width: 67% !important
+			background-color: transparent
+			padding: 10px 20px
+			color: #fff
+			line-height: 20px
+
+	&__button
+		display: flex
+		justify-content: center
+		align-items: center
+		padding-top: 45px
+
+	&__btn
+		background-color: #1dd3bd
+		box-shadow: 6px 6px 4px rgba(0, 0, 0, 0.08)
+
+		&:hover,
+		&:focus
+			box-shadow: 6px 6px 4px rgba(0, 0, 0, 0.26)
+			background-color: #168790
+
+	
+.footer
+	background-color: #d8d8d8
+	padding: 60px 0 55px
+
+	&__container
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+	&__logo
+		margin-bottom: 0
+
+	&__click
+		display: flex
+		flex-direction: column
+
+		a
+			color: #393939
+			font-size: 16px
+			position: relative
+			z-index: 1
+
+			&:hover,
+			&:focus
+				color: #1dd3bd
+				text-decoration: none
+
+	&__soc
+
+		a
+			font-size: 16px
+			color: #393939
+			position: relative
+			z-index: 1
+
+			&:nth-child(2)
+				margin-right: 35px
+
+				&:hover,
+				&:focus
+					color: #1dd3bd
+					text-decoration: none
+
+			&:nth-child(3)
+				img
+					margin-right: 0
+
+		img
+			margin-right: 15px
+
+		&_adp
+			display: none
+
+	&__up
+
+		a
+			color: #393939
+			font-size: 16px
+			position: relative
+
+			p
+				padding-top: 20px
+
+		&:hover,
+		&:focus
+			transform: scale(1.6, 1.6)
+
+		span
+			background-color: #168790
+			width: 26px
+			height: 26px
+			border-radius: 50%
+			position: absolute
+			bottom: -18px
+			left: 7px
+			&::before
+				content: ''
+				position: absolute
+				right: 1px
+				top: 10px
+				transform: rotate(45deg)
+				width: 15px
+				height: 3px
+				background-color: #fff
+				transition: all .6s
+
+			&::after
+				content: ''
+				position: absolute
+				right: 10px
+				top: 10px
+				transform: rotate(130deg)
+				width: 15px
+				height: 3px
+				background-color: #fff
+				transition: all .6s
+
+
+
+
+
+@import "page"
+@import "media" // Always at the end
