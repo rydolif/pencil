@@ -7762,6 +7762,8 @@ $(function() {
       $('body,html').animate({scrollTop: top - 60}, 950);
   });
 
+
+//-------------------------tabs---------------------------------------
   $('.tabs__wrap').hide();
   $('.tabs__wrap:first').show();
   $('.tabs ul a:first').addClass('active');
@@ -7830,11 +7832,11 @@ $(function() {
       clickable: true,
     },
     breakpoints: {
-      768: {
+      992: {
         slidesPerView: 3,
-        spaceBetween: 30,
+        spaceBetween: 20,
       },
-      640: {
+      767: {
         slidesPerView: 2,
         spaceBetween: 20,
       },

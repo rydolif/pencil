@@ -411,7 +411,7 @@
 .tabs
 	background-color: #ebebeb
 	overflow: visible
-	padding: 260px 0 80px
+	padding-top: 260px
 
 	h2
 		color: #2965b0
@@ -421,7 +421,7 @@
 	&__cover
 		display: flex
 		align-items: center
-		margin-bottom: 95px
+		padding-bottom: 65px
 
 		li
 			&:first-child
@@ -459,12 +459,13 @@
 				color: #ffffff
 
 	&__wrap
-		padding-left: 75px
+		&_list
+			background-color: #ebebeb
+			padding-bottom: 80px
 
 		li
 			font-size: 24px
 			color: #4c4c4c
-			line-height: 2
 
 			span
 				font-size: 36px
@@ -1091,11 +1092,13 @@
 	padding: 80px 0 60px
 	position: relative
 	overflow: visible
+	z-index: 1
 
 	&__container
 		display: flex
 		justify-content: center
 		align-items: center
+
 
 	h2
 		color: #168790
@@ -1125,7 +1128,7 @@
 			position: absolute
 			top: -7%
 			right: 0
-			z-index: 1
+			z-index: -1	
 
 	&__form
 
