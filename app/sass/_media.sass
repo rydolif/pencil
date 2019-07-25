@@ -128,7 +128,7 @@
 
 			.checkbox
 				
-				p
+				label
 					font-size: 30px
 
 					span
@@ -141,7 +141,9 @@
 				&::before,
 				&::after
 					left: -5px
-					bottom: 12px
+
+				&::before
+					top: 18px
 
 				&::after
 					top: 21px
@@ -825,7 +827,7 @@
 
 			.checkbox
 
-				p
+				label
 					font-size: 25px
 
 					span
@@ -835,8 +837,12 @@
 						font-size: 22px
 						margin-left: 10px
 
-			label::after
-				top: 13px
+			label
+				&::after
+					top: 13px
+
+				&::before
+					top: 10px
 
 			&_in
 				margin-top: 25px
@@ -886,7 +892,7 @@
 @media only screen and (max-width : 480px)
 	.question__bot img
 		display: none
-		
+
 	h2
 		font-size: 32px !important
 		margin-bottom: 25px !important
@@ -1042,7 +1048,8 @@
 				margin-bottom: 10px
 
 			.checkbox
-				p
+
+				label
 					font-size: 20px
 
 					span
@@ -1052,12 +1059,11 @@
 					s
 						display: none
 
-			label
-				&::before,
-					bottom: 7px
+					&::before,
+						top: 8px
 
-				&::after
-					top: 11px
+					&::after
+						top: 11px
 
 			.btn
 				padding: 0 40px
