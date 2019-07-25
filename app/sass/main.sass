@@ -6,13 +6,14 @@
 
 
 .hero
+	background-color: #168790
 	background-image: url(../img/hero_bg.jpg)
 	background-size: cover
 	background-repeat: no-repeat
-	background-position: 0 100%
+	background-position: 0 145%
 	z-index: 1
 	position: relative
-	padding: 100px 0
+	padding: 40px 0 100px
 
 	&__container
 		display: flex
@@ -79,7 +80,8 @@
 	background-color: #168790
 	position: relative
 	overflow: visible
-	padding: 70px 0 215px
+	padding: 40px 0 215px
+	z-index: 1
 
 	&__container
 		position: relative
@@ -117,7 +119,7 @@
 	&__list
 		display: flex
 		justify-content: space-between
-		margin-bottom: 125px
+		margin-bottom: 90px
 
 	&__item
 		width: 24%
@@ -128,7 +130,6 @@
 			font-size: 55px
 			font-family: $asc
 			font-weight: 700
-			padding-bottom: 40px
 
 		p
 			font-size: 24px
@@ -165,15 +166,16 @@
 .program
 	padding: 90px 0
 	overflow: visible
+	z-index: 2
 
 	h2
 		color: #168790
 		text-align: center
-		padding-bottom: 55px
+		margin-bottom: 50px
 
 	&__photo
 		position: relative
-		z-index: -1
+		z-index: 1
 
 		img
 			position: absolute
@@ -190,13 +192,17 @@
 		flex-direction: column
 		align-items: center
 
+		img
+			margin-bottom: 15px
+
 		span
+			line-height: 1
 			font-size: 46px
 			color: #4c4c4c
 			font-family: $asc
 			font-weight: 700
 			text-align: center
-			padding: 18px 0 50px
+			margin-bottom: 30px
 
 		p
 			font-size: 24px
@@ -208,11 +214,11 @@
 	background-image: url(../img/reviews_bg.jpg)
 	background-size: cover
 	background-position: 0% 0%
-	padding: 100px 0 175px
+	padding: 100px 0 145px
 
 	h2
 		color: #2965b0
-		margin-bottom: 120px
+		margin-bottom: 50px
 		text-align: center
 
 	&__slider
@@ -268,15 +274,16 @@
 
 .reviews
 	background-color: #168790
-	padding-bottom: 90px
+	padding-top: 30px
+	padding-bottom: 60px
 	position: relative
 
 	&__title
-
 		h2
 			text-align: center
 			color: #27efff
 			font-size: 60px
+			line-height: 1
 			font-family: $asc
 			font-weight: 700
 			margin-bottom: 50px
@@ -360,7 +367,8 @@
 
 	h2
 		font-size: 60px
-		margin-bottom: 75px
+		margin-bottom: 50px
+		line-height: 1
 		text-align: center
 		color: $accent
 
@@ -413,15 +421,25 @@
 	overflow: visible
 	padding-top: 260px
 
+	&__container
+		display: flex
+		justify-content: center
+		flex-direction: column
+		align-items: center
+
+	&--two
+		padding-top: 120px
+
 	h2
 		color: #2965b0
 		text-align: center
-		padding-bottom: 70px
+		padding-bottom: 50px
+		line-height: 1
 
 	&__cover
 		display: flex
 		align-items: center
-		padding-bottom: 65px
+		padding-bottom: 35px
 
 		li
 			&:first-child
@@ -461,27 +479,29 @@
 	&__wrap
 		&_list
 			background-color: #ebebeb
-			padding-bottom: 80px
+			padding-bottom: 40px
 
-		li
-			font-size: 24px
-			color: #4c4c4c
+			li
+				font-size: 24px
+				color: #4c4c4c
 
-			span
-				font-size: 36px
-				color: #168790
-				margin-right: 20px
+				span
+					font-size: 36px
+					color: #168790
+					margin-right: 20px
 
 
 .kurs
 	background-image: url(../img/kurs.jpg)
 	background-size: cover
+	background-repeat: no-repeat
+	background-color: #ebebeb
 	background-position: 0% 0%
 	padding: 100px 0 175px
 
 	h2
 		color: #2965b0
-		margin-bottom: 120px
+		margin-bottom: 50px
 		text-align: center
 
 	&__slider
@@ -602,17 +622,25 @@
 		width: 100%
 
 		h3
-			color: #1dd3bd
+			color: #168790
 			font-size: 50px
 			font-family: $asc
 			font-weight: 700
 			padding-bottom: 40px
 			text-align: center
 
-		input, textarea
+		input
 			border: 1px solid #ffffff
 			background-color: #ffffff
+			padding: 0 20px
+			width: 100%
+			height: 45px
+			line-height: 45px
+
+		textarea
 			padding: 10px 20px
+			border: 1px solid #ffffff
+			background-color: #ffffff
 			width: 100%
 
 		&_in
@@ -623,7 +651,7 @@
 			margin-bottom: 0
 
 			p
-				font-size: 50px
+				font-size: 48px
 				color: #da1502
 
 			span
@@ -713,11 +741,11 @@
 
 	h3
 		color: #168790
-		font-size: 60px
+		font-size: 52px
 		font-family: $asc
 		font-weight: 700
 		text-align: center
-		padding-bottom: 60px
+		margin-bottom: 30px
 
 	ul
 		width: 84%
@@ -735,14 +763,14 @@
 
 
 .resultat
-	padding-top: 150px
+	padding-top: 110px
 	background-color: #ebebeb
 	text-align: center
 
-	h1
+	h2
 		text-align: center
 		color: #168790
-		padding-bottom: 90px
+		margin-bottom: 30px
 
 	&__list
 		padding-bottom: 50px
@@ -792,8 +820,7 @@
 		color: #168790
 	p
 		color: #4c4c4c
-		font-size: 36px
-		text-transform: uppercase
+		font-size: 24px
 		line-height: 1
 
 	&__img
@@ -840,15 +867,16 @@
 		justify-content: center
 		align-items: center
 		margin-top: 40px
-		padding-bottom: 40px
+		margin-bottom: 40px
 
 		ul
 			color: #ffffff
 			font-size: 24px
-			line-height: 1.4
+			line-height: 1
 
 			span
 				font-size: 36px
+				line-height: 1.1
 				color: #27efff
 				padding-right: 20px
 
@@ -856,6 +884,11 @@
 		position: absolute
 		bottom: -810px
 		right: 35px
+
+		h3
+			line-height: 1
+			span
+				font-size: 32px
 
 	&__right
 		display: flex
@@ -867,7 +900,6 @@
 			color: #27efff
 			font-size: 36px
 			font-weight: 400
-
 
 		li
 			color: #ffffff
@@ -961,11 +993,11 @@
 	background-image: url(../img/reviews_bg.jpg)
 	background-size: cover
 	background-position: 0% 0%
-	padding: 100px 0 175px
+	padding: 100px 0 145px
 
 	h2
 		color: #2965b0
-		margin-bottom: 120px
+		margin-bottom: 60px
 		text-align: center
 
 	&__slider
@@ -1040,8 +1072,9 @@
 
 		h2
 			color: #27efff
-			padding-bottom: 75px
+			margin-bottom: 50px
 			text-align: center
+			line-height: 1
 
 	&__top
 		img
@@ -1060,7 +1093,6 @@
 
 	&__header
 		padding: 15px 0 15px 45px
-		margin-bottom: 10px
 		position: relative
 
 		p
@@ -1102,7 +1134,8 @@
 
 	h2
 		color: #168790
-		padding-bottom: 70px
+		margin-bottom: 50px
+		line-height: 1
 
 		span
 			color: #393939
@@ -1115,7 +1148,7 @@
 
 		img
 			position: absolute
-			bottom: -365px
+			bottom: -325px
 			left: -185px
 
 			&:nth-child(2)
@@ -1157,7 +1190,7 @@
 		display: flex
 		justify-content: center
 		align-items: center
-		padding-top: 45px
+		margin-top: 35px
 
 	&__btn
 		background-color: #1dd3bd
@@ -1171,7 +1204,7 @@
 
 .footer
 	background-color: #d8d8d8
-	padding: 60px 0 55px
+	padding: 40px 0
 
 	&__container
 		display: flex
