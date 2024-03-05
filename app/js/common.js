@@ -22,9 +22,9 @@ $(function() {
         name: 'required',
       },
       messages: {
-        name: "Введите Ваше имя",
-        phone: "Введите Ваш телефон",
-        mail: "Введите Ваш Email",
+        name: "Enter your name",
+        phone: "Enter your phone number",
+        mail: "Enter your Email",
       },
       submitHandler: function(form) {
         var t = {
