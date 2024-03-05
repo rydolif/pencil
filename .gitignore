@@ -1,14 +1,6 @@
 /node_modules/
-/dist/
-/libs/
+/maket/
 /.git/
-/psd/
-/js/common.js/
-/app/css/
-/.bowerrc/
-/gulpfile.js/
-/.gitignore/
-/_backstage
-/package-lock.json
-/Thumbs.db
+/**/Thumbs.db
 /**/*.DS_Store
+/**/package-lock.json
