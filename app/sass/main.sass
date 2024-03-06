@@ -1261,12 +1261,13 @@
 			font-size: 16px
 			position: relative
 
-			p
-				padding-top: 20px
 
-		&:hover,
-		&:focus
-			transform: scale(1.2, 1.2)
+			&:hover
+				span
+					background: #1dd3bd
+			&:active
+				span
+					background: #1dd3bd
 
 		span
 			background-color: #168790
@@ -1276,6 +1277,7 @@
 			position: absolute
 			bottom: -18px
 			left: 7px
+			transition: all .3s
 			&::before
 				content: ''
 				position: absolute
